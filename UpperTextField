@@ -1,0 +1,14 @@
+Ext.define('App.view.UpperTextField', {
+    extend: 'Ext.form.field.Text',
+    alias : 'widget.uppertextfield',
+    fieldStyle: "text-transform: uppercase",
+    initComponent: function() {
+        this.callParent(arguments);
+    },
+	upperValue : function () {
+		var me = this,
+		value = me.rawToValue(me.processRawValue(me.getRawValue()));
+		me.fieldValue = Ext.isEmpty(value) ? value : value.toUpperCase();
+		return Ext.isEmpty(value) ? value : value.toUpperCase();
+	}
+});
