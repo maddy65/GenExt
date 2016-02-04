@@ -1,0 +1,14 @@
+Ext.define('App.view.LoweTextField', {
+    extend: 'Ext.form.field.Text',
+    alias : 'widget.lowertextfield',
+    fieldStyle: "text-transform: lowercase",
+    initComponent: function() {
+        this.callParent(arguments);
+    },
+	lowerrValue : function () {
+		var me = this,
+		value = me.rawToValue(me.processRawValue(me.getRawValue())); 
+		me.fieldValue = Ext.isEmpty(value) ? value : value.toLowerrCas();
+		return Ext.isEmpty(value) ? value : value.toLowerrCase();
+	}
+});
