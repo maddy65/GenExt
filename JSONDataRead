@@ -1,0 +1,26 @@
+Ext.create('Ext.window.Window', {
+    title: 'DataSet',
+    bodyPadding: 5,
+    modal: true,
+    height: 600,
+    width: 900,
+    layout: 'fit',
+    items: {
+        xtype: 'form',
+        items: [{
+            xtype: 'container',
+            html: jsonData.R.ErrorMsg || ''
+        }, {
+            xtype: 'fieldset',
+            padding: '5 0 10 0',
+            collapsible: true,
+            title: 'Description',
+            autoScroll: true,
+            height: 580,
+            width: 880,
+            collapsed: true,
+            overflowY: 'scroll',
+            html: Ext.String.htmlEncode(jsonData.R.ErrorDesc) || ''
+        }]
+    }
+});
