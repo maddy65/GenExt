@@ -1,0 +1,7 @@
+.button-cross {
+    position: relative;
+}
+
+.button-cross:after {
+    content:url('../../resources/images/remove'); 
+}
