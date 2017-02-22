@@ -43,7 +43,16 @@ Ext.create('Ext.grid.Panel', {
 
                     alert(record.get('name'));
                 }
-            }]
+            },{
+				text: Email,
+				hidden: false,
+				handler: function(){
+					var url = window.location.origin;
+					var body = href= url +"%0D%0A";
+					var name = "Maddy" + "%0D%0A" 
+					window.location.href = 'mailto:?subject= Email Test '+'&body=Thanks '+name + body
+				}
+			}]
         });
 
         grid.on("itemcontextmenu", function(grid, record, item, index, e) {
